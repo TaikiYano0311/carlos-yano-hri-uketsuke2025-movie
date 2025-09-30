@@ -1,5 +1,5 @@
 <head>
-    <title>One-to-many Electrolaryngeal Voice Conversion with Synthetic Data</title>
+    <title></title>
     <meta name="viewport" content="width=800">
     <style>
         html,
@@ -191,7 +191,7 @@
         <header>
             One-to-many Electrolaryngeal Voice Conversion with Synthetic Data
         </header>
-        <div class="authors">
+        <!-- <div class="authors">
             <span>Bowen Wu</span><sup>1,2</sup>,
             <span>Haruto Ueno</span><sup>1,3</sup>,
             <span>Carlos Toshinori Ishi</span><sup>1,2</sup>,
@@ -203,7 +203,7 @@
             <div><sup>3</sup> Graduate School of Engineering Science, The University of Osaka, Japan</div>
             <div><sup>4</sup> National Institute of Informatics, Japan</div>
             <div style="margin-top: 10px;">E-mail: bowen.wu@riken.jp</div>
-        </div>
+        </div> -->
         <section class="abstract-section">
             <h2>Abstract</h2>
             <p>
@@ -218,32 +218,14 @@
                 This study represents a concrete step toward restoring natural communication for EL users.
             </p>
         </section>
-        <div class="image-block">
-            <img src="assets/figures/overview.svg" alt="Method Overview">
-            <div class="caption">
-                Overview of our method. Our model takes as input an EL speech and a natural speech, and outputs a speech
-                whose linguistic content is the same as the EL speech but the voice is the same as the natural speech.
-                This ability is learned from finetuning an existing VC model (QuickVC: QVC) on our augmented data.
-                During inference, the input to Whisper encoder is EL speech, the input to Speaker Encoder is natural
-                (target) speech.
-            </div>
-        </div>
+        
         <section class="section">
             <h2 style="text-align: left;">Conversion from EL Speech to Natural Speech</h2>
             <div class="explanation">Conversion from EL speech to natural speech by converting its voice to the voice of
                 the target speech. In the following table, the voice of the each source EL speech is converted to that
                 of the target speech while preserving the linguistic content. Our finetuned model achieved better
                 intonation and intelligibility compared to QVC baseline.</div>
-            <div style="text-align:left; margin-bottom: 18px;">
-                <h3 style="font-size: 1.05rem; font-weight: 600; margin: 0 0 8px 0; color: #555; text-align: left;">
-                    Target Speech</h3>
-                <audio controls style="margin-left: 0;">
-                    <source
-                        src="https://wu-cloud-bucket.s3.ap-northeast-3.amazonaws.com/20250912-el2nl-voice-conversion/el2nl/targets/jvs001/001.wav"
-                        type="audio/wav">
-                    Your browser does not support the audio element.
-                </audio>
-            </div>
+            
             <table>
                 <colgroup>
                     <col style="width:20%">
@@ -251,25 +233,29 @@
                     <col style="width:20%">
                     <col style="width:20%">
                     <col style="width:20%">
+                    
                 </colgroup>
                 <thead>
                     <tr>
-                        <th>Source EL Speech</th>
-                        <th>QVC</th>
-                        <th>QVC-mix</th>
-                        <th>flat-F0</th>
-                        <th>ours-10k</th>
+                        <th>Scenarios</th>
+                        <th>dd</th>
+                        <th>ds</th>
+                        <th>sd</th>
+                        <th>ss</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td>
-                            <audio controls>
+                            <p>1</p>
+                        </td>
+                        <td>
+                            <video controls>
                                 <source
-                                    src="https://wu-cloud-bucket.s3.ap-northeast-3.amazonaws.com/20250912-el2nl-voice-conversion/el2nl/el/011.wav"
-                                    type="audio/wav">
+                                    src="https://wu-cloud-bucket.s3.ap-northeast-3.amazonaws.com/20250926-carlos-yano-situation-behavior/1-1dd.mp4"
+                                    type="video/mp4">
                                 Your browser does not support the audio element.
-                            </audio>
+                            </video>
                         </td>
                         <td>
                             <audio controls>
@@ -295,14 +281,7 @@
                                 Your browser does not support the audio element.
                             </audio>
                         </td>
-                        <td>
-                            <audio controls>
-                                <source
-                                    src="https://wu-cloud-bucket.s3.ap-northeast-3.amazonaws.com/20250912-el2nl-voice-conversion/el2nl/qvc_ft_10k/audio/jvs001/011.wav"
-                                    type="audio/wav">
-                                Your browser does not support the audio element.
-                            </audio>
-                        </td>
+                
                     </tr>
                     <tr>
                         <td>
@@ -337,14 +316,7 @@
                                 Your browser does not support the audio element.
                             </audio>
                         </td>
-                        <td>
-                            <audio controls>
-                                <source
-                                    src="https://wu-cloud-bucket.s3.ap-northeast-3.amazonaws.com/20250912-el2nl-voice-conversion/el2nl/qvc_ft_10k/audio/jvs001/017.wav"
-                                    type="audio/wav">
-                                Your browser does not support the audio element.
-                            </audio>
-                        </td>
+                        
                     </tr>
                     <tr>
                         <td>
@@ -379,14 +351,7 @@
                                 Your browser does not support the audio element.
                             </audio>
                         </td>
-                        <td>
-                            <audio controls>
-                                <source
-                                    src="https://wu-cloud-bucket.s3.ap-northeast-3.amazonaws.com/20250912-el2nl-voice-conversion/el2nl/qvc_ft_10k/audio/jvs001/021.wav"
-                                    type="audio/wav">
-                                Your browser does not support the audio element.
-                            </audio>
-                        </td>
+                        
                     </tr>
                     <tr>
                         <td>
@@ -421,14 +386,7 @@
                                 Your browser does not support the audio element.
                             </audio>
                         </td>
-                        <td>
-                            <audio controls>
-                                <source
-                                    src="https://wu-cloud-bucket.s3.ap-northeast-3.amazonaws.com/20250912-el2nl-voice-conversion/el2nl/qvc_ft_10k/audio/jvs001/025.wav"
-                                    type="audio/wav">
-                                Your browser does not support the audio element.
-                            </audio>
-                        </td>
+                        
                     </tr>
                     <tr>
                         <td>
@@ -463,14 +421,7 @@
                                 Your browser does not support the audio element.
                             </audio>
                         </td>
-                        <td>
-                            <audio controls>
-                                <source
-                                    src="https://wu-cloud-bucket.s3.ap-northeast-3.amazonaws.com/20250912-el2nl-voice-conversion/el2nl/qvc_ft_10k/audio/jvs001/035.wav"
-                                    type="audio/wav">
-                                Your browser does not support the audio element.
-                            </audio>
-                        </td>
+                        
                     </tr>
                     <tr>
                         <td>
@@ -505,14 +456,7 @@
                                 Your browser does not support the audio element.
                             </audio>
                         </td>
-                        <td>
-                            <audio controls>
-                                <source
-                                    src="https://wu-cloud-bucket.s3.ap-northeast-3.amazonaws.com/20250912-el2nl-voice-conversion/el2nl/qvc_ft_10k/audio/jvs001/036.wav"
-                                    type="audio/wav">
-                                Your browser does not support the audio element.
-                            </audio>
-                        </td>
+                        
                     </tr>
                     <tr>
                         <td>
@@ -547,14 +491,7 @@
                                 Your browser does not support the audio element.
                             </audio>
                         </td>
-                        <td>
-                            <audio controls>
-                                <source
-                                    src="https://wu-cloud-bucket.s3.ap-northeast-3.amazonaws.com/20250912-el2nl-voice-conversion/el2nl/qvc_ft_10k/audio/jvs001/058.wav"
-                                    type="audio/wav">
-                                Your browser does not support the audio element.
-                            </audio>
-                        </td>
+                        
                     </tr>
                     <tr>
                         <td>
@@ -589,14 +526,7 @@
                                 Your browser does not support the audio element.
                             </audio>
                         </td>
-                        <td>
-                            <audio controls>
-                                <source
-                                    src="https://wu-cloud-bucket.s3.ap-northeast-3.amazonaws.com/20250912-el2nl-voice-conversion/el2nl/qvc_ft_10k/audio/jvs001/065.wav"
-                                    type="audio/wav">
-                                Your browser does not support the audio element.
-                            </audio>
-                        </td>
+                        
                     </tr>
                     <tr>
                         <td>
@@ -631,454 +561,11 @@
                                 Your browser does not support the audio element.
                             </audio>
                         </td>
-                        <td>
-                            <audio controls>
-                                <source
-                                    src="https://wu-cloud-bucket.s3.ap-northeast-3.amazonaws.com/20250912-el2nl-voice-conversion/el2nl/qvc_ft_10k/audio/jvs001/071.wav"
-                                    type="audio/wav">
-                                Your browser does not support the audio element.
-                            </audio>
-                        </td>
+                        
                     </tr>
                 </tbody>
             </table>
         </section>
-        <section class="section">
-            <h2>One-to-Many Voice Conversion of EL Speech</h2>
-            <div class="explanation">Conversion from EL speech to multiple speaker's speech using our proposed model.
-                The converted speech samples have identical intonation but different voices, showing that our model
-                learned to reconstruct the intonation from the EL speech.</div>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Source EL Speech</th>
-                        <th>
-                            Target Speech 1
-                            <div style="margin-top: 10px;">
-                                <audio controls>
-                                    <source
-                                        src="https://wu-cloud-bucket.s3.ap-northeast-3.amazonaws.com/20250912-el2nl-voice-conversion/el2nl/gt/audio/jvs081/001.wav"
-                                        type="audio/wav">
-                                    Your browser does not support the audio element.
-                                </audio>
-                            </div>
-                        </th>
-                        <th>
-                            Target Speech 2
-                            <div style="margin-top: 10px;">
-                                <audio controls>
-                                    <source
-                                        src="https://wu-cloud-bucket.s3.ap-northeast-3.amazonaws.com/20250912-el2nl-voice-conversion/el2nl/gt/audio/jvs021/001.wav"
-                                        type="audio/wav">
-                                    Your browser does not support the audio element.
-                                </audio>
-                            </div>
-                        </th>
-                        <th>
-                            Target Speech 3
-                            <div style="margin-top: 10px;">
-                                <audio controls>
-                                    <source
-                                        src="https://wu-cloud-bucket.s3.ap-northeast-3.amazonaws.com/20250912-el2nl-voice-conversion/el2nl/gt/audio/jvs041/001.wav"
-                                        type="audio/wav">
-                                    Your browser does not support the audio element.
-                                </audio>
-                            </div>
-                        </th>
-                        <th>
-                            Target Speech 4
-                            <div style="margin-top: 10px;">
-                                <audio controls>
-                                    <source
-                                        src="https://wu-cloud-bucket.s3.ap-northeast-3.amazonaws.com/20250912-el2nl-voice-conversion/el2nl/gt/audio/jvs061/001.wav"
-                                        type="audio/wav">
-                                    Your browser does not support the audio element.
-                                </audio>
-                            </div>
-                        </th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>
-                            <audio controls>
-                                <source
-                                    src="https://wu-cloud-bucket.s3.ap-northeast-3.amazonaws.com/20250912-el2nl-voice-conversion/el2nl/el/011.wav"
-                                    type="audio/wav">
-                                Your browser does not support the audio element.
-                            </audio>
-                        </td>
-                        <td>
-                            <audio controls>
-                                <source
-                                    src="https://wu-cloud-bucket.s3.ap-northeast-3.amazonaws.com/20250912-el2nl-voice-conversion/el2nl/qvc_ft_10k/audio/jvs081/011.wav"
-                                    type="audio/wav">
-                                Your browser does not support the audio element.
-                            </audio>
-                        </td>
-                        <td>
-                            <audio controls>
-                                <source
-                                    src="https://wu-cloud-bucket.s3.ap-northeast-3.amazonaws.com/20250912-el2nl-voice-conversion/el2nl/qvc_ft_10k/audio/jvs021/011.wav"
-                                    type="audio/wav">
-                                Your browser does not support the audio element.
-                            </audio>
-                        </td>
-                        <td>
-                            <audio controls>
-                                <source
-                                    src="https://wu-cloud-bucket.s3.ap-northeast-3.amazonaws.com/20250912-el2nl-voice-conversion/el2nl/qvc_ft_10k/audio/jvs041/011.wav"
-                                    type="audio/wav">
-                                Your browser does not support the audio element.
-                            </audio>
-                        </td>
-                        <td>
-                            <audio controls>
-                                <source
-                                    src="https://wu-cloud-bucket.s3.ap-northeast-3.amazonaws.com/20250912-el2nl-voice-conversion/el2nl/qvc_ft_10k/audio/jvs061/011.wav"
-                                    type="audio/wav">
-                                Your browser does not support the audio element.
-                            </audio>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <audio controls>
-                                <source
-                                    src="https://wu-cloud-bucket.s3.ap-northeast-3.amazonaws.com/20250912-el2nl-voice-conversion/el2nl/el/017.wav"
-                                    type="audio/wav">
-                                Your browser does not support the audio element.
-                            </audio>
-                        </td>
-                        <td>
-                            <audio controls>
-                                <source
-                                    src="https://wu-cloud-bucket.s3.ap-northeast-3.amazonaws.com/20250912-el2nl-voice-conversion/el2nl/qvc_ft_10k/audio/jvs081/017.wav"
-                                    type="audio/wav">
-                                Your browser does not support the audio element.
-                            </audio>
-                        </td>
-                        <td>
-                            <audio controls>
-                                <source
-                                    src="https://wu-cloud-bucket.s3.ap-northeast-3.amazonaws.com/20250912-el2nl-voice-conversion/el2nl/qvc_ft_10k/audio/jvs021/017.wav"
-                                    type="audio/wav">
-                                Your browser does not support the audio element.
-                            </audio>
-                        </td>
-                        <td>
-                            <audio controls>
-                                <source
-                                    src="https://wu-cloud-bucket.s3.ap-northeast-3.amazonaws.com/20250912-el2nl-voice-conversion/el2nl/qvc_ft_10k/audio/jvs041/017.wav"
-                                    type="audio/wav">
-                                Your browser does not support the audio element.
-                            </audio>
-                        </td>
-                        <td>
-                            <audio controls>
-                                <source
-                                    src="https://wu-cloud-bucket.s3.ap-northeast-3.amazonaws.com/20250912-el2nl-voice-conversion/el2nl/qvc_ft_10k/audio/jvs061/017.wav"
-                                    type="audio/wav">
-                                Your browser does not support the audio element.
-                            </audio>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <audio controls>
-                                <source
-                                    src="https://wu-cloud-bucket.s3.ap-northeast-3.amazonaws.com/20250912-el2nl-voice-conversion/el2nl/el/021.wav"
-                                    type="audio/wav">
-                                Your browser does not support the audio element.
-                            </audio>
-                        </td>
-                        <td>
-                            <audio controls>
-                                <source
-                                    src="https://wu-cloud-bucket.s3.ap-northeast-3.amazonaws.com/20250912-el2nl-voice-conversion/el2nl/qvc_ft_10k/audio/jvs081/021.wav"
-                                    type="audio/wav">
-                                Your browser does not support the audio element.
-                            </audio>
-                        </td>
-                        <td>
-                            <audio controls>
-                                <source
-                                    src="https://wu-cloud-bucket.s3.ap-northeast-3.amazonaws.com/20250912-el2nl-voice-conversion/el2nl/qvc_ft_10k/audio/jvs021/021.wav"
-                                    type="audio/wav">
-                                Your browser does not support the audio element.
-                            </audio>
-                        </td>
-                        <td>
-                            <audio controls>
-                                <source
-                                    src="https://wu-cloud-bucket.s3.ap-northeast-3.amazonaws.com/20250912-el2nl-voice-conversion/el2nl/qvc_ft_10k/audio/jvs041/021.wav"
-                                    type="audio/wav">
-                                Your browser does not support the audio element.
-                            </audio>
-                        </td>
-                        <td>
-                            <audio controls>
-                                <source
-                                    src="https://wu-cloud-bucket.s3.ap-northeast-3.amazonaws.com/20250912-el2nl-voice-conversion/el2nl/qvc_ft_10k/audio/jvs061/021.wav"
-                                    type="audio/wav">
-                                Your browser does not support the audio element.
-                            </audio>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <audio controls>
-                                <source
-                                    src="https://wu-cloud-bucket.s3.ap-northeast-3.amazonaws.com/20250912-el2nl-voice-conversion/el2nl/el/025.wav"
-                                    type="audio/wav">
-                                Your browser does not support the audio element.
-                            </audio>
-                        </td>
-                        <td>
-                            <audio controls>
-                                <source
-                                    src="https://wu-cloud-bucket.s3.ap-northeast-3.amazonaws.com/20250912-el2nl-voice-conversion/el2nl/qvc_ft_10k/audio/jvs081/025.wav"
-                                    type="audio/wav">
-                                Your browser does not support the audio element.
-                            </audio>
-                        </td>
-                        <td>
-                            <audio controls>
-                                <source
-                                    src="https://wu-cloud-bucket.s3.ap-northeast-3.amazonaws.com/20250912-el2nl-voice-conversion/el2nl/qvc_ft_10k/audio/jvs021/025.wav"
-                                    type="audio/wav">
-                                Your browser does not support the audio element.
-                            </audio>
-                        </td>
-                        <td>
-                            <audio controls>
-                                <source
-                                    src="https://wu-cloud-bucket.s3.ap-northeast-3.amazonaws.com/20250912-el2nl-voice-conversion/el2nl/qvc_ft_10k/audio/jvs041/025.wav"
-                                    type="audio/wav">
-                                Your browser does not support the audio element.
-                            </audio>
-                        </td>
-                        <td>
-                            <audio controls>
-                                <source
-                                    src="https://wu-cloud-bucket.s3.ap-northeast-3.amazonaws.com/20250912-el2nl-voice-conversion/el2nl/qvc_ft_10k/audio/jvs061/025.wav"
-                                    type="audio/wav">
-                                Your browser does not support the audio element.
-                            </audio>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <audio controls>
-                                <source
-                                    src="https://wu-cloud-bucket.s3.ap-northeast-3.amazonaws.com/20250912-el2nl-voice-conversion/el2nl/el/035.wav"
-                                    type="audio/wav">
-                                Your browser does not support the audio element.
-                            </audio>
-                        </td>
-                        <td>
-                            <audio controls>
-                                <source
-                                    src="https://wu-cloud-bucket.s3.ap-northeast-3.amazonaws.com/20250912-el2nl-voice-conversion/el2nl/qvc_ft_10k/audio/jvs081/035.wav"
-                                    type="audio/wav">
-                                Your browser does not support the audio element.
-                            </audio>
-                        </td>
-                        <td>
-                            <audio controls>
-                                <source
-                                    src="https://wu-cloud-bucket.s3.ap-northeast-3.amazonaws.com/20250912-el2nl-voice-conversion/el2nl/qvc_ft_10k/audio/jvs021/035.wav"
-                                    type="audio/wav">
-                                Your browser does not support the audio element.
-                            </audio>
-                        </td>
-                        <td>
-                            <audio controls>
-                                <source
-                                    src="https://wu-cloud-bucket.s3.ap-northeast-3.amazonaws.com/20250912-el2nl-voice-conversion/el2nl/qvc_ft_10k/audio/jvs041/035.wav"
-                                    type="audio/wav">
-                                Your browser does not support the audio element.
-                            </audio>
-                        </td>
-                        <td>
-                            <audio controls>
-                                <source
-                                    src="https://wu-cloud-bucket.s3.ap-northeast-3.amazonaws.com/20250912-el2nl-voice-conversion/el2nl/qvc_ft_10k/audio/jvs061/035.wav"
-                                    type="audio/wav">
-                                Your browser does not support the audio element.
-                            </audio>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <audio controls>
-                                <source
-                                    src="https://wu-cloud-bucket.s3.ap-northeast-3.amazonaws.com/20250912-el2nl-voice-conversion/el2nl/el/036.wav"
-                                    type="audio/wav">
-                                Your browser does not support the audio element.
-                            </audio>
-                        </td>
-                        <td>
-                            <audio controls>
-                                <source
-                                    src="https://wu-cloud-bucket.s3.ap-northeast-3.amazonaws.com/20250912-el2nl-voice-conversion/el2nl/qvc_ft_10k/audio/jvs081/036.wav"
-                                    type="audio/wav">
-                                Your browser does not support the audio element.
-                            </audio>
-                        </td>
-                        <td>
-                            <audio controls>
-                                <source
-                                    src="https://wu-cloud-bucket.s3.ap-northeast-3.amazonaws.com/20250912-el2nl-voice-conversion/el2nl/qvc_ft_10k/audio/jvs021/036.wav"
-                                    type="audio/wav">
-                                Your browser does not support the audio element.
-                            </audio>
-                        </td>
-                        <td>
-                            <audio controls>
-                                <source
-                                    src="https://wu-cloud-bucket.s3.ap-northeast-3.amazonaws.com/20250912-el2nl-voice-conversion/el2nl/qvc_ft_10k/audio/jvs041/036.wav"
-                                    type="audio/wav">
-                                Your browser does not support the audio element.
-                            </audio>
-                        </td>
-                        <td>
-                            <audio controls>
-                                <source
-                                    src="https://wu-cloud-bucket.s3.ap-northeast-3.amazonaws.com/20250912-el2nl-voice-conversion/el2nl/qvc_ft_10k/audio/jvs061/036.wav"
-                                    type="audio/wav">
-                                Your browser does not support the audio element.
-                            </audio>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <audio controls>
-                                <source
-                                    src="https://wu-cloud-bucket.s3.ap-northeast-3.amazonaws.com/20250912-el2nl-voice-conversion/el2nl/el/058.wav"
-                                    type="audio/wav">
-                                Your browser does not support the audio element.
-                            </audio>
-                        </td>
-                        <td>
-                            <audio controls>
-                                <source
-                                    src="https://wu-cloud-bucket.s3.ap-northeast-3.amazonaws.com/20250912-el2nl-voice-conversion/el2nl/qvc_ft_10k/audio/jvs081/058.wav"
-                                    type="audio/wav">
-                                Your browser does not support the audio element.
-                            </audio>
-                        </td>
-                        <td>
-                            <audio controls>
-                                <source
-                                    src="https://wu-cloud-bucket.s3.ap-northeast-3.amazonaws.com/20250912-el2nl-voice-conversion/el2nl/qvc_ft_10k/audio/jvs021/058.wav"
-                                    type="audio/wav">
-                                Your browser does not support the audio element.
-                            </audio>
-                        </td>
-                        <td>
-                            <audio controls>
-                                <source
-                                    src="https://wu-cloud-bucket.s3.ap-northeast-3.amazonaws.com/20250912-el2nl-voice-conversion/el2nl/qvc_ft_10k/audio/jvs041/058.wav"
-                                    type="audio/wav">
-                                Your browser does not support the audio element.
-                            </audio>
-                        </td>
-                        <td>
-                            <audio controls>
-                                <source
-                                    src="https://wu-cloud-bucket.s3.ap-northeast-3.amazonaws.com/20250912-el2nl-voice-conversion/el2nl/qvc_ft_10k/audio/jvs061/058.wav"
-                                    type="audio/wav">
-                                Your browser does not support the audio element.
-                            </audio>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <audio controls>
-                                <source
-                                    src="https://wu-cloud-bucket.s3.ap-northeast-3.amazonaws.com/20250912-el2nl-voice-conversion/el2nl/el/065.wav"
-                                    type="audio/wav">
-                                Your browser does not support the audio element.
-                            </audio>
-                        </td>
-                        <td>
-                            <audio controls>
-                                <source
-                                    src="https://wu-cloud-bucket.s3.ap-northeast-3.amazonaws.com/20250912-el2nl-voice-conversion/el2nl/qvc_ft_10k/audio/jvs081/065.wav"
-                                    type="audio/wav">
-                                Your browser does not support the audio element.
-                            </audio>
-                        </td>
-                        <td>
-                            <audio controls>
-                                <source
-                                    src="https://wu-cloud-bucket.s3.ap-northeast-3.amazonaws.com/20250912-el2nl-voice-conversion/el2nl/qvc_ft_10k/audio/jvs021/065.wav"
-                                    type="audio/wav">
-                                Your browser does not support the audio element.
-                            </audio>
-                        </td>
-                        <td>
-                            <audio controls>
-                                <source
-                                    src="https://wu-cloud-bucket.s3.ap-northeast-3.amazonaws.com/20250912-el2nl-voice-conversion/el2nl/qvc_ft_10k/audio/jvs041/065.wav"
-                                    type="audio/wav">
-                                Your browser does not support the audio element.
-                            </audio>
-                        </td>
-                        <td>
-                            <audio controls>
-                                <source
-                                    src="https://wu-cloud-bucket.s3.ap-northeast-3.amazonaws.com/20250912-el2nl-voice-conversion/el2nl/qvc_ft_10k/audio/jvs061/065.wav"
-                                    type="audio/wav">
-                                Your browser does not support the audio element.
-                            </audio>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <audio controls>
-                                <source
-                                    src="https://wu-cloud-bucket.s3.ap-northeast-3.amazonaws.com/20250912-el2nl-voice-conversion/el2nl/el/071.wav"
-                                    type="audio/wav">
-                                Your browser does not support the audio element.
-                            </audio>
-                        </td>
-                        <td>
-                            <audio controls>
-                                <source
-                                    src="https://wu-cloud-bucket.s3.ap-northeast-3.amazonaws.com/20250912-el2nl-voice-conversion/el2nl/qvc_ft_10k/audio/jvs081/071.wav"
-                                    type="audio/wav">
-                                Your browser does not support the audio element.
-                            </audio>
-                        </td>
-                        <td>
-                            <audio controls>
-                                <source
-                                    src="https://wu-cloud-bucket.s3.ap-northeast-3.amazonaws.com/20250912-el2nl-voice-conversion/el2nl/qvc_ft_10k/audio/jvs021/071.wav"
-                                    type="audio/wav">
-                                Your browser does not support the audio element.
-                            </audio>
-                        </td>
-                        <td>
-                            <audio controls>
-                                <source
-                                    src="https://wu-cloud-bucket.s3.ap-northeast-3.amazonaws.com/20250912-el2nl-voice-conversion/el2nl/qvc_ft_10k/audio/jvs041/071.wav"
-                                    type="audio/wav">
-                                Your browser does not support the audio element.
-                            </audio>
-                        </td>
-                        <td>
-                            <audio controls>
-                                <source
-                                    src="https://wu-cloud-bucket.s3.ap-northeast-3.amazonaws.com/20250912-el2nl-voice-conversion/el2nl/qvc_ft_10k/audio/jvs061/071.wav"
-                                    type="audio/wav">
-                                Your browser does not support the audio element.
-                            </audio>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
+        
     </main>
 </body>
