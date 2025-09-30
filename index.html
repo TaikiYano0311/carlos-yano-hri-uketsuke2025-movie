@@ -150,12 +150,12 @@
             transition: background 0.2s;
         }
 
-        audio {
+        /* audio {
             width: 180px;
             height: 32px;
             margin: 0 auto;
             display: block;
-        }
+        } */
 
         /* Center audio players in the second table header */
         table:nth-of-type(2) thead th div {
@@ -169,7 +169,7 @@
             margin: 0 auto;
         }
 
-        @media (max-width: 900px) {
+        /* @media (max-width: 900px) {
             main {
                 max-width: 100%;
             }
@@ -182,7 +182,7 @@
                 width: 100%;
                 min-width: 120px;
             }
-        }
+        } */
     </style>
 </head>
 
@@ -228,11 +228,11 @@
             
             <table>
                 <colgroup>
+                    <!-- <col style="width:10%">
                     <col style="width:20%">
                     <col style="width:20%">
                     <col style="width:20%">
-                    <col style="width:20%">
-                    <col style="width:20%">
+                    <col style="width:20%"> -->
                     
                 </colgroup>
                 <thead>
@@ -250,7 +250,7 @@
                             <p>1</p>
                         </td>
                         <td>
-                            <video controls>
+                            <video controls width="150%">
                                 <source
                                     src="https://wu-cloud-bucket.s3.ap-northeast-3.amazonaws.com/20250926-carlos-yano-situation-behavior/1-1dd.mp4"
                                     type="video/mp4">
@@ -258,12 +258,12 @@
                             </video>
                         </td>
                         <td>
-                            <audio controls>
+                            <video controls width="150%">
                                 <source
-                                    src="https://wu-cloud-bucket.s3.ap-northeast-3.amazonaws.com/20250912-el2nl-voice-conversion/el2nl/qvc_base/audio/jvs001/011.wav"
-                                    type="audio/wav">
+                                    src="https://wu-cloud-bucket.s3.ap-northeast-3.amazonaws.com/20250926-carlos-yano-situation-behavior/1-1dd.mp4"
+                                    type="video/mp4">
                                 Your browser does not support the audio element.
-                            </audio>
+                            </video>
                         </td>
                         <td>
                             <audio controls>
